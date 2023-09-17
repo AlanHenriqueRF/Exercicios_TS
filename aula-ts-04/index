@@ -1,0 +1,35 @@
+function multiply(num1, num2) {
+    return num1 * num2;
+}
+function sum(num1, num2) {
+    num1 = Number(num1);
+    num2 = Number(num2);
+    if (!num1 || !num2) {
+        return ("N\u00E3o \u00E9 poss\u00EDvel executar a fun\u00E7\u00E3o sum, pois num1 ou num2 n\u00E3o pode ser convertido a n\u00FAmero!");
+    }
+    return num1 + num2;
+}
+function isEven(num) {
+    return num % 2 === 0;
+}
+function showResult(result) {
+    if (isEven(result)) {
+        console.log("The result is ".concat(result, " and it's even!"));
+    }
+    else {
+        console.log("The result is ".concat(result, " and it's odd!"));
+    }
+}
+(function () {
+    var num1 = 'df'; //prompt("First Number");
+    var num2 = 7; //prompt("Second Number");
+    var result = sum(num1, num2);
+    if (typeof (result) === "string") {
+        console.log(result);
+        return;
+    }
+    ;
+    result += multiply(1, 2);
+    showResult(result);
+})();
+console.log(sum('12x', '2'));
